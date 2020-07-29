@@ -2,23 +2,24 @@ import React from 'react';
 import Logo from '../../assets/img/Logo_shareflix.png';
 import './Menu.css';
 import Button from '../Button';
+import { Link } from 'react-router-dom'
 //import ButtonLink from './components/ButtonLink';
 
 function Menu() {
     return (
         <nav className="Menu">
-            <a href="/">
+            <Link to="/">
                 <img src={Logo} alt="Shareflix logo" className="Logo"/>
-            </a>
+            </Link>
 
             {/*Sem styled components (Puxa do css do componente usando props):
-            <ButtonLink className="ButtonLink" href="/">
+            <ButtonLink className="ButtonLink" to="/">
                 Novo Vídeo
             </ButtonLink>
             */}
 
             {/*Usando styled components (Puxa do index .js do Button)*/}
-            <Button as="a" className="ButtonLink" href="/">
+            <Button className="ButtonLink" to="/cadastro/video">
                 Novo Vídeo
             </Button>
         </nav>  
